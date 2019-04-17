@@ -9,9 +9,10 @@
 ## using custom tests
 ```
 Import NumbersToWords;
-NumbersToWords("0").words
+NumbersToWords("45781", add_and=False).words # for when the conjuntion "and" is unnecessary
+NumbersToWords("45781", add_and=True).words # for when the conjuntion "and" is necessary
 
-# replace 0 with customer numbers as desired
+# replace 45781 with custom numbers as desired within the bounds
 ```
 
 ## Assumptions
