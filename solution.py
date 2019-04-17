@@ -3,12 +3,15 @@ import re
 
 class NumbersToWords(object):
 
-    def __init__(self, number: str):
+    def __init__(self, number: str, add_and=False):
         """
         Given any number up to a vigintillion, this class will return the same number in words
         :param number: The interger number to convert to words
+        :param add_and: if you want good English, change add_and to True
         :type number: str
         """
+        self.add_and = add_and
+
         if re.match(r"^\d+$", number):
 
             thousands = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
@@ -31,7 +34,7 @@ class NumbersToWords(object):
                     if words != "zero":
 
                         # only for the last group, add an and if necessary
-                        if index == group_count - 1 and group[0] == "0":
+                        if index == group_count - 1 and group[0] == "0" and add_and:
                             self.words.append("and")
 
                         self.words.append(words)
@@ -139,6 +142,8 @@ class NumbersToWords(object):
             start = self.single_digits(first_digit)
             words.append(f"{start} hundred ")
             others = self.two_digits(digits[1:])
-            if others:
+            if others and self.add_and:
                 words.append(f"and {others}")
+            else:
+                words.append(f"{others}")
         return ' '.join(words)
