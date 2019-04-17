@@ -21,6 +21,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(NumbersToWords("10000000001").words , "ten billion and one")
         self.assertEqual(NumbersToWords("This is a number").words , "NAN")
         self.assertEqual(NumbersToWords("").words , "NAN")
+        self.assertEqual(NumbersToWords("423").words , "four hundred and twenty three")
+        self.assertEqual(NumbersToWords("5672").words , "five thousand six hundred and seventy two")
+        self.assertEqual(NumbersToWords("45781").words , "fourty five thousand seven hundred and eighty one")
 
 
 if __name__ == '__main__':
