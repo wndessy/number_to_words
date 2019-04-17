@@ -1,10 +1,12 @@
-# requirements
+# Given any number up to a vigintillion, this class will return the same number in words
+
+## requirements
 - python3 
 
-# running the tests
+## running the tests
 ```python tests.py```
 
-# using custom tests
+## using custom tests
 ```
 Import NumbersToWords;
 NumbersToWords("0").words
@@ -12,7 +14,7 @@ NumbersToWords("0").words
 # replace 0 with customer numbers as desired
 ```
 
-# Assumptions
+## Assumptions
 The class only works with strings. We are not handling
 - negative integers
 - direct integers. 
