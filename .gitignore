@@ -1,0 +1,5 @@
+venv*
+veenv*
+.idea*
+*.mp3
+_*_
