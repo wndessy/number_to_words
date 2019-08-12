@@ -1,0 +1,10 @@
+.idea/*
+_*_
+*.mp3
+veenv*
+build*
+dist*
+ntw.egg-info*
+number_to_words.egg-info*
+
+

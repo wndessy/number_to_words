@@ -1,25 +1,54 @@
-# Given any number up to a vigintillion, this class will return the same number in words
+# This package will generate the english word equivalent of any given number upto a vigintillion
 
 ## requirements
 - python3 
 
-## running the tests
-```python tests.py```
-
-## using custom tests
+## installation
+run the following pip command to install the latest version
 ```
-Import NumbersToWords;
-NumbersToWords("45781", add_and=False).words # for when the conjuntion "and" is unnecessary
-NumbersToWords("45781", add_and=True).words # for when the conjuntion "and" is necessary
-
-# replace 45781 with custom numbers as desired within the bounds
+pip install number-to-words
 ```
 
-## Assumptions
-The class only works with strings. We are not handling
-- negative integers
-- direct integers. 
+##usage
 
-You have to pass the number intented as a string
-Of course a serializer can be used to validate this in production
-if it was user input.
+The following is an example of how to use the package
+
+### add_and=True
+- for when the conjuntion "and" is necessary in the wording of a number
+```python
+
+from number_to_words import NumbersToWords
+in_words=NumbersToWords("281029292028020",add_and=True).words
+print(in_words)
+
+```
+
+#### output
+```bash
+two hundred and eighty one trillion twenty nine billion two hundred and ninety two million twenty eight thousand and twenty
+```
+- for when the conjunction "and" is unnecessary in the wording of a number
+
+```python
+
+from number_to_words import NumbersToWords
+in_words=NumbersToWords("281029292028020",add_and=False).words
+print(in_words)
+```
+#### output
+
+```bash
+two hundred eighty one trillion twenty nine billion two hundred ninety two million twenty eight thousand twenty
+```
+
+## Points to note 
+- You have to pass the number intended as a string parameter
+- The package does not handle the following yet:
+    -  negative integers
+    -  direct integers. (not converted to string)
+    -  decimal numbers 
+    
+- replace 281029292028020 with custom numbers as desired within the bounds
+
+
+## ENJOY!

@@ -1,6 +1,6 @@
 import unittest
 
-from solution import NumbersToWords
+from number_to_words import NumbersToWords
 
 
 class MyTestCase(unittest.TestCase):
