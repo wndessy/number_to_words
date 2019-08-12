@@ -1,4 +1,4 @@
-# This package will generate the english word equivalent of any given number upto a vigintillion
+# This package will generate the English word equivalent of any given number upto a vigintillion
 
 ## requirements
 - python3 
@@ -9,7 +9,7 @@ run the following pip command to install the latest version
 pip install number-to-words
 ```
 
-##usage
+## usage
 
 The following is an example of how to use the package
 
@@ -18,7 +18,7 @@ The following is an example of how to use the package
 ```python
 
 from number_to_words import NumbersToWords
-in_words=NumbersToWords("281029292028020",add_and=True).words
+in_words=NumbersToWords("281029292028020", add_and=True).words
 print(in_words)
 
 ```
@@ -27,12 +27,12 @@ print(in_words)
 ```bash
 two hundred and eighty one trillion twenty nine billion two hundred and ninety two million twenty eight thousand and twenty
 ```
-- for when the conjunction "and" is unnecessary in the wording of a number
+- for when the conjunction "and" is not necessary in the wording of a number
 
 ```python
 
 from number_to_words import NumbersToWords
-in_words=NumbersToWords("281029292028020",add_and=False).words
+in_words=NumbersToWords("281029292028020", add_and=False).words
 print(in_words)
 ```
 #### output
